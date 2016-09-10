@@ -3,9 +3,9 @@ function loadImage(path /* string */) {
     return new Promise((resolve, reject) => {
         let image = new Image();
         let on = image.addEventListener;
-        on('load', (event) => resolve(image));
-        on('error', (event) => reject(image));
+
+        on('load', () => resolve(image));
+        on('error', () => reject(image));
         image.src = path;
-        return image;
     })
 }
