@@ -1,3 +1,5 @@
+'use strict';
+
 function loadImage(path /* string */) {
     console.debug('loadImage', path);
     return new Promise((resolve, reject) => {

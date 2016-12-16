@@ -1,4 +1,5 @@
 {
     "private": true,
-    "name": "concept-assets-loader"
+    "name": "concept-assets-loader",
+    "version": "1.0.0"
 }

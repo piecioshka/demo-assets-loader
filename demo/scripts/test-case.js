@@ -1,3 +1,5 @@
+'use strict';
+
 var al = new AssetsLoader();
 
 al.addImage('../assets/images/plants.jpg');

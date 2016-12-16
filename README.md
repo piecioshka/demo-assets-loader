@@ -4,57 +4,59 @@
 
 ## Why?
 
-For explain for what we can use `Set` constructor in `ECMAScript 2015` for speach at WarsawJS #25.
+For explain for what we can use `Set` constructor in `ECMAScript 2015` for
+speech at WarsawJS Meetup #25.
 
 ## How it works?
 
-I prepare 2 versions of solutions:
+I prepare 2 versions of solutions
 
-* First version use simple `Set` constructor to create `images`:
+### First version use simple `Set` constructor to create `images`
 
-    ```javascript
-    class AssetsLoader {
-        constructor() {
-            this._images = new Set();
-        }
-    
-        addImage(path /* string */) {
-            return this._images.add(loadImage(path));
-        }
-    
-        loadImages() {
-            return Promise.all(this._images);
-        }
+```javascript
+class AssetsLoader {
+    constructor() {
+        this._images = new Set();
     }
-    ```
 
-* Second version use `Images` class (with method `load`) as subclassing of `Set`: 
-    
-    ```javascript
-    class Images extends Set {
-        add(path) {
-            super.add.call(this, loadImage(path));
-        }
-    
-        load() {
-            return Promise.all(this.keys());
-        }
+    addImage(path /* string */) {
+        return this._images.add(loadImage(path));
     }
-    
-    class AssetsLoader {
-        constructor() {
-            this._images = new Images();
-        }
-    
-        addImage(path /* string */) {
-            return this._images.add(path);
-        }
-    
-        loadImages() {
-            return this._images.load();
-        }
+
+    loadImages() {
+        return Promise.all(this._images);
     }
-    ```
+}
+```
+
+### Second version use `Images` class (with method `load`) as subclassing of 
+`Set`: 
+
+```javascript
+class Images extends Set {
+    add(path) {
+        super.add.call(this, loadImage(path));
+    }
+
+    load() {
+        return Promise.all(this.keys());
+    }
+}
+
+class AssetsLoader {
+    constructor() {
+        this._images = new Images();
+    }
+
+    addImage(path /* string */) {
+        return this._images.add(path);
+    }
+
+    loadImages() {
+        return this._images.load();
+    }
+}
+```
 
 ## License
 
