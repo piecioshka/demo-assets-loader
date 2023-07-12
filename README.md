@@ -1,6 +1,6 @@
 # demo-assets-loader
 
-:fish: Concept of AssetsLoader. Especially images.
+🚁 Concept of AssetsLoader. Especially images.
 
 ## Preview 🎉
 
