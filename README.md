@@ -1,6 +1,10 @@
-# concept-assets-loader
+# demo-assets-loader
 
-> :fish: Concept of AssetsLoader. Especially images.
+:fish: Concept of AssetsLoader. Especially images.
+
+## Preview 🎉
+
+https://piecioshka.github.io/demo-assets-loader/demo/
 
 ## Why?
 
