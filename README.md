@@ -11,7 +11,7 @@ https://piecioshka.github.io/demo-assets-loader/demo/
 For explain for what we can use `Set` constructor in `ECMAScript 2015` for
 speech at WarsawJS Meetup #25.
 
-## How it works?
+## How it works? 🚀
 
 I prepare 2 versions of solutions
 
@@ -33,8 +33,7 @@ class AssetsLoader {
 }
 ```
 
-### Second version use `Images` class (with method `load`) as subclassing of 
-`Set`: 
+### Second version use `Images` class (with method `load`) as subclassing of `Set`: 
 
 ```javascript
 class Images extends Set {
@@ -64,4 +63,4 @@ class AssetsLoader {
 
 ## License
 
-[The MIT License](http://piecioshka.mit-license.org) @ 2016
+[The MIT License](https://piecioshka.mit-license.org) @ 2016
